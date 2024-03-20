@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Pain" skipped="0" tests="4" time="0.37" timestamp="2024-03-20 11:20:35"><testcase name="Minimum 2 digits"/><testcase name="debtor amount is equal to the sum of all credits"/><testcase name="transaction date is not in the future"/><testcase name="IBAN is valid"/></testsuite>
