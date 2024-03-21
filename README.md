@@ -23,7 +23,4 @@ Create a Junit test runner with the following:
 
 ### Viewing the test report
 
-Once the tests have run, you should be presented with the location of the report. For example,
-
-Open this report in your browser.
-
+Once the tests are finished, type **mvn serenity:aggregate** in terminal and a link to a full report will be displayed in console

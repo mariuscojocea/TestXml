@@ -8,14 +8,17 @@ extractor/TransactionDateExtractor.class
 parser/GrpHdr.class
 extractor/TotalAmountExtractor.class
 parser/CdtTrfTxInf.class
+xmlFileHandler/XmlFileHandler.class
 extractor/IbanExtractor.class
 parser/Document.class
 parser/CstmrCdtTrfInitn.class
 extractor/CreditExtractor.class
+xmlFileHandler/DefaultXmlFileHandler.class
 utils/IBANValidationUtils.class
 LocalTestRunner.class
 parser/InstdAmt.class
 stepDefinitions/StepDefinitions.class
+xmlFileHandler/XmlFileHandlerFactory.class
 extractor/XmlExtractor.class
 parser/DbtrAcct.class
 utils/Hooks.class
