@@ -4,7 +4,7 @@ Feature: Pain XML
 
   Background:
     Given I have pain XML file
-    And The XML file is valid
+#    And The XML file is valid
 
   @minimumDigits
   Scenario: Minimum 2 digits

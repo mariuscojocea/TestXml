@@ -16,7 +16,7 @@ public class StepsDefinitions {
 
     @Given("^I have (.*) XML file")
     public void getFile(String file) throws JAXBException {
-        steps.xmlFilePath(file);
+        steps.loadXml(file);
     }
 
     @And("^The XML file is valid")
@@ -31,7 +31,7 @@ public class StepsDefinitions {
 
     @Then("^The total amount has at least (.*) digits")
     public void verifyNumberOfDigits(int numberOfDigits) {
-        steps.numberHasAtLeastTwoDigits(numberOfDigits);
+        steps.validateNumberDigits(numberOfDigits);
     }
 
 
@@ -50,7 +50,7 @@ public class StepsDefinitions {
 
     @When("^I retrieve the IBAN")
     public void getIban() {
-        steps.getIban();
+        steps.getIbans();
     }
     
     @Then("^The IBAN is valid")

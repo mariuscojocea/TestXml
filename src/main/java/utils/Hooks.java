@@ -9,11 +9,11 @@ public class Hooks {
 
     @Before
     public void beforeScenarios() {
-        System.out.println("11111");
+        System.out.println("Starting tests for XML file validation");
     }
 
     @After
     public void afterScenarios() {
-        System.out.println("AFTER");
+        System.out.println("Tests finished");
     }
 }
