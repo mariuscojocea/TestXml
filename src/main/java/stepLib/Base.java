@@ -7,6 +7,7 @@ import parser.Document;
 import xmlFileHandler.DefaultXmlFileHandler;
 import xmlFileHandler.XmlFileHandler;
 import xmlFileHandler.XmlFileHandlerFactory;
+import xmlValidation.XmlValidation;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -68,11 +69,15 @@ public class Base {
         return allICreditorsIbans;
     }
 
-
     //validates iban format
     protected static boolean validateIban(String iban) {
         IBAN ibn = IBAN.parse(iban);
         return ibn.isSEPA();
+    }
+
+    //validates xml file with xsd file
+    protected boolean validateXml(String xmlFile, String xsdFile) {
+        return XmlValidation.checkXml(xmlFile, xsdFile);
     }
 
 }

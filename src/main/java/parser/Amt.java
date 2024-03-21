@@ -6,8 +6,8 @@ import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Amt extends CdtTrfTxInf{
-    @XmlElement(name = "InstdAmt")
+public class Amt {
+    @XmlElement(name = "InstdAmt", namespace = "urn:iso:std:iso:20022:tech:xsd:pain.001.001.11")
     private BigDecimal instdAmt;
 
     //credit amount

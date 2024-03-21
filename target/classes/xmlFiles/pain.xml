@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Document>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.11" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.11 pain.001.001.11.xsd">
     <CstmrCdtTrfInitn>
         <GrpHdr>
             <MsgId>DEUTDEBBXXX0020240220042409</MsgId>
             <CreDtTm>2024-02-20T04:24:09.000Z</CreDtTm>
             <NbOfTxs>3</NbOfTxs>
-            <CtrlSum>8003.2</CtrlSum>
+            <CtrlSum>8000.2</CtrlSum>
             <InitgPty>
                 <Nm>Joe Doe</Nm>
             </InitgPty>
@@ -15,7 +16,7 @@
             <PmtMtd>TRF</PmtMtd>
             <BtchBookg>true</BtchBookg>
             <NbOfTxs>3</NbOfTxs>
-            <CtrlSum>8003.2</CtrlSum>
+            <CtrlSum>8000.2</CtrlSum>
             <PmtTpInf>
                 <SvcLvl>
                     <Cd>SEPA</Cd>

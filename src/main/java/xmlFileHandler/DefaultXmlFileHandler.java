@@ -16,7 +16,7 @@ public class DefaultXmlFileHandler implements XmlFileHandler{
     }
 
     public Document loadXmlFile(String fileName) {
-        String filePath = "src/main/resources/files/" + fileName + ".xml";
+        String filePath = "src/main/resources/xmlFiles/" + fileName + ".xml";
         try {
             JAXBContext context = JAXBContext.newInstance(Document.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();

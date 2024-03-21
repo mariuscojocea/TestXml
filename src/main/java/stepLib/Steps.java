@@ -1,8 +1,6 @@
 package stepLib;
 
 import org.joda.time.LocalDate;
-import parser.Document;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
@@ -54,6 +52,10 @@ public class Steps extends Base{
         for (String iban : getIbans()) {
             validateIban(iban);
         }
+    }
+
+    public void verifyXmlValidation(String xmlFile, String xsdFile) {
+        validateXml(xmlFile, xsdFile);
     }
 
 
