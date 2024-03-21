@@ -1,10 +1,10 @@
 # Created by mcojocea at 19.03.2024
-@all
+@all @pain
 Feature: Pain XML
 
   Background:
     Given I have pain XML file
-#    And The XML file is valid
+    And The XML pain file is valid against pain.001.001.11 schema
 
   @minimumDigits
   Scenario: Minimum 2 digits

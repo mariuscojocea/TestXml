@@ -6,11 +6,11 @@ import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class GrpHdr extends Document{
-    @XmlElement(name = "CtrlSum")
+public class GrpHdr {
+    @XmlElement(name = "CtrlSum", namespace = "urn:iso:std:iso:20022:tech:xsd:pain.001.001.11")
     private BigDecimal ctrlSum;
 
-    @XmlElement(name = "CreDtTm")
+    @XmlElement(name = "CreDtTm", namespace = "urn:iso:std:iso:20022:tech:xsd:pain.001.001.11")
     private String creDtTm;
 
     //sum of all credits

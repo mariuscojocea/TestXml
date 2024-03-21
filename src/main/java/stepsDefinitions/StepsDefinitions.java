@@ -7,21 +7,19 @@ import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Shared;
 import stepLib.Steps;
 
-import javax.xml.bind.JAXBException;
-
 public class StepsDefinitions {
 
     @Shared
     Steps steps;
 
     @Given("^I have (.*) XML file")
-    public void getFile(String file) throws JAXBException {
+    public void getFile(String file) {
         steps.loadXml(file);
     }
 
-    @And("^The XML file is valid")
-    public void validateXml() {
-        //Add in a @Before
+    @And("^The XML (.*) file is valid against (.*) schema")
+    public void validateXmlFile(String xmlFile, String xsdFile) {
+        steps.verifyXmlValidation(xmlFile, xsdFile);
     }
 
     @When("^I verify the debtor total amount")
@@ -41,12 +39,12 @@ public class StepsDefinitions {
     }
     
     @When("^I get the transaction date")
-    public void getTransactionDate() throws JAXBException {
+    public void getTransactionDate() {
         steps.compareDate();
     }
     
     @Then("The transaction date is not in the future")
-    public void verifyTransactionDate() throws JAXBException { steps.compareDate(); }
+    public void verifyTransactionDate() { steps.compareDate(); }
 
     @When("^I retrieve the IBAN")
     public void getIban() {
