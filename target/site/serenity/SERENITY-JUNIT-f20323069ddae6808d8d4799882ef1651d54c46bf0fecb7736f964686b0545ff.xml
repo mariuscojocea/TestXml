@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="4" name="Pain1 XML" skipped="0" tests="4" time="0.09" timestamp="2024-03-22 11:45:09"><testcase name="Minimum 2 digits"><failure message="The number has less than 2 digits" type="java.lang.AssertionError">The number has less than 2 digits</failure><system-err>The number has less than 2 digits
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="4" name="Pain1 XML" skipped="0" tests="4" time="0.14" timestamp="2024-03-22 03:34:04"><testcase name="Minimum 2 digits"><failure message="The number has less than 2 digits" type="java.lang.AssertionError">The number has less than 2 digits</failure><system-err>The number has less than 2 digits
 stepLib.Steps.validateNumberDigits(Steps.java:24)
 stepsDefinitions.StepsDefinitions.verifyNumberOfDigits(StepsDefinitions.java:32)
 io.cucumber.java.Invoker.doInvoke(Invoker.java:66)

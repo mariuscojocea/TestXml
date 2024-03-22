@@ -138,7 +138,7 @@
             <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 22-03-2024 11:45</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 22-03-2024 15:34</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -188,9 +188,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
-                                <span class="failing-color">
+                                <span class="success-color">
                                     IBAN is valid
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -249,7 +249,7 @@
                     </td>
 
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">006ms</span></td>
+                    <td width="100"><span class="top-level-step">005ms</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
 
@@ -271,7 +271,7 @@
                     </td>
 
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">010ms</span></td>
+                    <td width="100"><span class="top-level-step">011ms</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
 
@@ -295,106 +295,12 @@
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
                     <td width="100"><span class="top-level-step">001ms</span></td>
                 </tr>
-                <tr class="test-FAILURE">
+                <tr class="test-SUCCESS">
 
                     <td width="50" class="step-icon">
                         <a name="3"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection3')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection3 failure-icon"
-                                   style="margin-left: 20px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection3')"
-                               style="display:block;">
-                                <span class="top-level-step">
-                                                Then The IBAN is valid
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="top-level-step">FAILURE</span></td>
-                    <td width="100"><span class="top-level-step">007ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection3" class="step-table-nested" style="display:none;">
-                <tr class="test-FAILURE">
-
-                    <td width="70" class="step-icon">
-                        <a name="3-0"></a>
-                            <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a>
-                                </span>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                                <span class="nested-group-step">
-                                                Validate ibans
-                                        </span>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-group-step">FAILURE</span></td>
-                    <td width="100"><span class="nested-group-step">003ms</span></td>
-                </tr>
-                    <tr class="test-FAILURE">
-                        <td width="40">&nbsp</td>
-                        <td width="%" colspan="3" class="error-message-cell">
-
-
-    <div style="display:block">
-        <div class="table">
-            <div class="row">
-                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">junit.framework.AssertionFailedError: The following ibans are invalid: [DE0550010517319528jksd2731]</span>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-5"
-                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
-                </div>
-             </div>
-        </div>
-    <div>
-
-    <!-- Details Section -->
-    <div class="row stacktrace-details">
-      <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-5">
-            <div class="card">
-                <div class="card-header">
-                    <h4>junit.framework.AssertionFailedError </h4>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <pre>junit.framework.Assert.fail(Assert.java:57)<br />junit.framework.TestCase.fail(TestCase.java:223)<br />stepLib.Steps.validateIbans(Steps.java:57)<br />stepsDefinitions.StepsDefinitions.validateIban(StepsDefinitions.java:56)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:64)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:104)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:73)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:258)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:57)<br /></pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-                        </td>
-                    </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-FAILURE">
-
-                    <td width="50" class="step-icon">
-                        <a name="4"></a>
                             <span style="margin-left: 20px;"
-                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a>
+                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
                                 </span>
                     </td>
 
@@ -408,51 +314,13 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="top-level-step">FAILURE</span></td>
+                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
                     <td width="100"><span class="top-level-step">001ms</span></td>
                 </tr>
-                    <tr class="test-FAILURE">
-                        <td width="40">&nbsp</td>
-                        <td width="%" colspan="3" class="error-message-cell">
-
-
-    <div style="display:block">
-        <div class="table">
-            <div class="row">
-                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">junit.framework.AssertionFailedError: The following ibans are invalid: [DE0550010517319528jksd2731]</span>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-6"
-                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
-                </div>
-             </div>
-        </div>
-    <div>
-
-    <!-- Details Section -->
-    <div class="row stacktrace-details">
-      <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-6">
-            <div class="card">
-                <div class="card-header">
-                    <h4>junit.framework.AssertionFailedError </h4>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <pre>junit.framework.Assert.fail(Assert.java:57)<br />junit.framework.TestCase.fail(TestCase.java:223)<br />stepLib.Steps.validateIbans(Steps.java:57)<br />stepsDefinitions.StepsDefinitions.validateIban(StepsDefinitions.java:56)<br />✽.The IBAN is valid(file:///Users/mcojocea/IdeaProjects/TestXML/src/test/features/testPain.feature:27)<br /></pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-                        </td>
-                    </tr>
-            <tr class="test-FAILURE">
+            <tr class="test-SUCCESS">
                     <td colspan="2"></td>
-                <td width="130"><span class="top-level-step"><em>FAILURE</em></span></td>
-                <td width="100"><span class="top-level-step"><em>0.07s</em></span></td>
+                <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                <td width="100"><span class="top-level-step"><em>0.02s</em></span></td>
             </tr>
 
         </table>
