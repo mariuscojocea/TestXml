@@ -9,24 +9,27 @@ import java.io.File;
 
 public class XmlValidation {
 
-        public static boolean checkXml(String xmlFile, String xsdFile) {
+
+    public boolean checkXml(String xmlFile, String xsdFile) {
+        String xmlFilePath = "src/main/resources/xmlFiles/" + xmlFile + ".xml";
+        String xsdFilePath = "src/main/resources/xsd/" + xsdFile + ".xsd";
         try {
 
             // Create a SchemaFactory and specify the XML schema language and source
             SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-            Schema schema = factory.newSchema(new File("src/main/resources/xsd/" + xsdFile + ".xsd"));
+            Schema schema = factory.newSchema(new File(xsdFilePath));
 
             // Create a validator for the XML schema
             Validator validator = schema.newValidator();
 
-            // Validate the XML document against the schema
-            validator.validate(new StreamSource("src/main/resources/xmlFiles/" + xmlFile + ".xml"));
+            XmlValidationErrorHandler errorHandler = new XmlValidationErrorHandler();
+            validator.setErrorHandler(errorHandler);
 
+            // Validate the XML document against the schema
+            validator.validate(new StreamSource(xmlFilePath));
             return true;
         } catch (Exception e) {
-            e.printStackTrace();
             return false;
         }
     }
-
 }
