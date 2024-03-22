@@ -4,7 +4,10 @@ Feature: Pain XML
 
   Background:
     Given I have pain XML file
-    And The XML pain file is valid against pain.001.001.11 schema
+
+  @validateXml
+  Scenario: Validate XML
+    Then The XML pain file is valid against pain.001.001.11 schema
 
   @minimumDigits
   Scenario: Minimum 2 digits

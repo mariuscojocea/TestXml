@@ -7,8 +7,8 @@ The TestXML repo contains some tests that verify that:
 - transaction date is not in the future
 - IBANs are valid
 
-Tests based on pain.xml will pass, while pain1.xml is a modified version of pain.xml 
-that has data which causes the tests to fail
+Tests based on pain.xml will pass (besides the validation one), while pain1.xml is a modified version 
+of pain.xml that has data which causes the tests to fail
 
 
 ### Prerequisites
@@ -26,10 +26,12 @@ Create a Junit test runner with the following:
 
 ### Viewing the test report
 
-Once the tests are finished, type **mvn serenity:aggregate** in terminal and a link to a 
+Once the tests run is finished locally, type **mvn serenity:aggregate** in terminal and a link to a 
 full report will be displayed in console
 
 
 ### XML Validator
-The XML validation will not fail the tests if the XML is not valid, because the validation fails for the xml. 
-It will only log the errors and continue with the tests
+The XML validation is added as a standalone scenario, because the validation fails for the xml.
+Adding it in a @Before would cause all the tests to fail. One option would be to just log the errors
+without failing the tests, but that could lead to false positives.
+It will log the errors in terminal and in the serenity report.
