@@ -1,6 +1,6 @@
 package stepLib;
 
-import nl.garvelink.iban.IBAN;
+import lombok.extern.slf4j.Slf4j;
 import org.joda.time.LocalDate;
 import parser.CdtTrfTxInf;
 import parser.Document;
@@ -12,11 +12,17 @@ import xmlValidation.XmlValidation;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+@Slf4j
 public class Base {
 
     private XmlFileHandler xmlFileHandler;
     private Document document;
+
+    public static ArrayList<String> invalidIbans = new ArrayList<>();
+
 
     //loads provided XML file in feature file
     protected void loadXmlFile(String file) {
@@ -70,9 +76,19 @@ public class Base {
     }
 
     //validates iban format
-    protected static boolean validateIban(String iban) {
-        IBAN ibn = IBAN.parse(iban);
-        return ibn.isSEPA();
+    //dropped it because it gives a IllegalArgumentException when parsing an invalid IBAN but the report is not clear
+//    protected static boolean validateIban(String iban) {
+//        IBAN ibn = IBAN.parse(iban);
+//        return ibn.isSEPA();
+//    }
+
+    protected void validateIban(String iban) {
+        String ibanPattern = "^[A-Z]{2}[0-9]{2}[A-Z0-9]{4}[0-9]{7}([A-Z0-9]?){0,16}$";
+        Pattern pattern = Pattern.compile(ibanPattern);
+        Matcher matcher = pattern.matcher(iban);
+        if (!matcher.matches()) {
+            invalidIbans.add(iban);
+        }
     }
 
     //validates xml file with xsd file
