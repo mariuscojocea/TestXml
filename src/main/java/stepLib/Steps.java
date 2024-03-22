@@ -1,5 +1,6 @@
 package stepLib;
 
+import junit.framework.TestCase;
 import org.joda.time.LocalDate;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -51,6 +52,9 @@ public class Steps extends Base{
     public void validateIbans() {
         for (String iban : getIbans()) {
             validateIban(iban);
+        }
+        if(!invalidIbans.isEmpty()) {
+            TestCase.fail("The following ibans are invalid: " + invalidIbans);
         }
     }
 

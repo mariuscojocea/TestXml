@@ -3,6 +3,8 @@ package utils;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import lombok.extern.slf4j.Slf4j;
+import net.serenitybdd.core.annotations.events.AfterScenario;
+import stepLib.Base;
 
 @Slf4j
 public class Hooks {
@@ -15,5 +17,10 @@ public class Hooks {
     @After
     public void afterScenarios() {
         System.out.println("Tests finished");
+    }
+
+    @AfterScenario
+    public void afterScenario() {
+        Base.invalidIbans.clear();
     }
 }
