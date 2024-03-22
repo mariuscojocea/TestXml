@@ -1,6 +1,5 @@
 package stepsDefinitions;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,8 +16,8 @@ public class StepsDefinitions {
         steps.loadXml(file);
     }
 
-    @And("^The XML (.*) file is valid against (.*) schema")
-    public void validateXmlFile(String xmlFile, String xsdFile) {
+    @Then("^The XML (.*) file is valid against (.*) schema")
+    public void validateXmlFile(String xmlFile, String xsdFile) throws Exception {
         steps.verifyXmlValidation(xmlFile, xsdFile);
     }
 

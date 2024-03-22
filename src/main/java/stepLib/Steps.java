@@ -58,7 +58,7 @@ public class Steps extends Base{
         }
     }
 
-    public void verifyXmlValidation(String xmlFile, String xsdFile) {
+    public void verifyXmlValidation(String xmlFile, String xsdFile) throws Exception {
         validateXml(xmlFile, xsdFile);
     }
 

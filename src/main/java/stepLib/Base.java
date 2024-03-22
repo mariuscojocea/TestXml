@@ -92,8 +92,8 @@ public class Base {
     }
 
     //validates xml file with xsd file
-    protected boolean validateXml(String xmlFile, String xsdFile) {
-        return new XmlValidation().checkXml(xmlFile, xsdFile);
+    protected void validateXml(String xmlFile, String xsdFile) throws Exception {
+        new XmlValidation().checkXml(xmlFile, xsdFile);
     }
 
 }
