@@ -2,8 +2,8 @@ package stepLib;
 
 import lombok.extern.slf4j.Slf4j;
 import org.joda.time.LocalDate;
-import parser.CdtTrfTxInf;
-import parser.Document;
+import xmlParser.CdtTrfTxInf;
+import xmlParser.Document;
 import xmlFileHandler.DefaultXmlFileHandler;
 import xmlFileHandler.XmlFileHandler;
 import xmlFileHandler.XmlFileHandlerFactory;

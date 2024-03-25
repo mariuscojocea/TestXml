@@ -1,4 +1,4 @@
-package parser;
+package xmlParser;
 
 import org.joda.time.LocalDate;
 import utils.LocalDateAdapter;

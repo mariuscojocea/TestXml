@@ -1,14 +1,13 @@
-package parser;
+package xmlParser;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class CdtrAcct {
+public class DbtrAcct {
     @XmlElement(name = "Id", namespace = "urn:iso:std:iso:20022:tech:xsd:pain.001.001.11")
-    private CreditorId creditorId;
+    private DebitorId debitorId;
 
-    public CreditorId getCreditorId() { return creditorId; }
-
+    public DebitorId getId() { return debitorId; }
 }

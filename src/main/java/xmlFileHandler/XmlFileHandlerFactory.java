@@ -7,9 +7,9 @@ import java.util.Map;
 
 public class XmlFileHandlerFactory {
 
-    public static Map<String, Files > files = new HashMap<>();
+    public Map<String, Files > files = new HashMap<>();
 
-    static {
+    {
         files.put("pain", Files.PAIN);
         files.put("pain1", Files.PAIN1);
     }

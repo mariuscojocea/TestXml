@@ -6,13 +6,15 @@ import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Shared;
 import stepLib.Steps;
 
+import java.io.IOException;
+
 public class StepsDefinitions {
 
     @Shared
     Steps steps;
 
     @Given("^I have (.*) XML file")
-    public void getFile(String file) {
+    public void getFile(String file) throws IOException {
         steps.loadXml(file);
     }
 

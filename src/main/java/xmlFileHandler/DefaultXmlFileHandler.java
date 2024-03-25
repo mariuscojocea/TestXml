@@ -1,6 +1,6 @@
 package xmlFileHandler;
 
-import parser.Document;
+import xmlParser.Document;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

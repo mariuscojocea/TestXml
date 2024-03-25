@@ -1,4 +1,4 @@
-package parser;
+package xmlParser;
 import javax.xml.bind.annotation.*;
 
 //@XmlRootElement(name = "Document")
