@@ -9,6 +9,7 @@ import xmlFileHandler.XmlFileHandler;
 import xmlFileHandler.XmlFileHandlerFactory;
 import xmlValidation.XmlValidation;
 
+import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,7 @@ public class Base {
 
 
     //loads provided XML file in feature file
-    protected void loadXmlFile(String file) {
+    protected void loadXmlFile(String file) throws FileNotFoundException {
         xmlFileHandler = new XmlFileHandlerFactory().createXmlFileHandler(file);
         document = new DefaultXmlFileHandler(file).loadXmlFile(file);
     }
@@ -58,13 +59,12 @@ public class Base {
 
     //get debitor iban
     protected String getDebitorIban() {
-        String debitorAccIban =  document.getCstmrCdtTrfInitn().getPmtInf().getDbtrAcct().getId().getIban();
-        return debitorAccIban;
+        return document.getCstmrCdtTrfInitn().getPmtInf().getDbtrAcct().getId().getIban();
     }
 
     //get all creditors ibans
     protected ArrayList<String> getCreditorIbans() {
-        ArrayList<String> allICreditorsIbans = new ArrayList<String>();
+        ArrayList<String> allICreditorsIbans = new ArrayList<>();
         List<CdtTrfTxInf> allTransactionsInfo = document.getCstmrCdtTrfInitn().getPmtInf().getCdtTrfTxInf();
         for (CdtTrfTxInf creditorAccIban : allTransactionsInfo) {
             String iban = creditorAccIban.getCdtrAcct().getCreditorId().getIban();

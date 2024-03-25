@@ -6,7 +6,7 @@ import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Shared;
 import stepLib.Steps;
 
-import java.io.IOException;
+import java.io.FileNotFoundException;
 
 public class StepsDefinitions {
 
@@ -14,7 +14,7 @@ public class StepsDefinitions {
     Steps steps;
 
     @Given("^I have (.*) XML file")
-    public void getFile(String file) throws IOException {
+    public void getFile(String file) throws FileNotFoundException {
         steps.loadXml(file);
     }
 

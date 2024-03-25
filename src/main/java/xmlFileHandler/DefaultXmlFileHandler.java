@@ -1,11 +1,13 @@
 package xmlFileHandler;
 
+import utils.JsonUtils;
 import xmlParser.Document;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
+import java.io.FileNotFoundException;
 
 public class DefaultXmlFileHandler implements XmlFileHandler{
 
@@ -15,8 +17,8 @@ public class DefaultXmlFileHandler implements XmlFileHandler{
         this.fileName = fileName;
     }
 
-    public Document loadXmlFile(String fileName) {
-        String filePath = "src/main/resources/xmlFiles/" + fileName + ".xml";
+    public Document loadXmlFile(String fileName) throws FileNotFoundException {
+        String filePath = new JsonUtils().getXmlFilePath(fileName);
         try {
             JAXBContext context = JAXBContext.newInstance(Document.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
