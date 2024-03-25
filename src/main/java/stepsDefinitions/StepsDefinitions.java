@@ -47,7 +47,7 @@ public class StepsDefinitions {
 
     @When("^I retrieve the IBAN")
     public void getIban() {
-        steps.getIbans();
+        steps.getALlIbans();
     }
     
     @Then("^The IBAN is valid")

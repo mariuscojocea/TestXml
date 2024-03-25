@@ -2,8 +2,9 @@ package stepLib;
 
 import junit.framework.TestCase;
 import org.joda.time.LocalDate;
+import utils.DateUtils;
+
 import java.math.BigDecimal;
-import java.util.ArrayList;
 
 import static org.junit.Assert.fail;
 
@@ -36,25 +37,14 @@ public class Steps extends Base{
         LocalDate currentDate = LocalDate.now();
         LocalDate transactionDate = getTransactionDate();
         System.out.println("Transaction date: " + transactionDate);
-        if (!currentDate.isAfter(transactionDate)) {
-            fail("The transaction date is in the future");
+        if (new DateUtils().isDateInThePast(currentDate, transactionDate)) {
+            fail("The transaction date is in the future: " + transactionDate);
         }
-    }
-
-    public ArrayList<String> getIbans() {
-        ArrayList<String> allIbans = new ArrayList<String>();
-        allIbans.add(getDebitorIban());
-        allIbans.addAll(getCreditorIbans());
-        System.out.println(allIbans);
-        return allIbans;
     }
 
     public void validateIbans() {
-        for (String iban : getIbans()) {
-            validateIban(iban);
-        }
-        if(!invalidIbans.isEmpty()) {
-            TestCase.fail("The following ibans are invalid: " + invalidIbans);
+        if(!getInvalidIbans().isEmpty()) {
+            TestCase.fail("The following ibans are invalid: " + getInvalidIbans());
         }
     }
 

@@ -21,12 +21,10 @@ public class Base {
     private XmlFileHandler xmlFileHandler;
     private Document document;
 
-    public static ArrayList<String> invalidIbans = new ArrayList<>();
-
 
     //loads provided XML file in feature file
     protected void loadXmlFile(String file) {
-        xmlFileHandler = XmlFileHandlerFactory.createXmlFileHandler(file);
+        xmlFileHandler = new XmlFileHandlerFactory().createXmlFileHandler(file);
         document = new DefaultXmlFileHandler(file).loadXmlFile(file);
     }
 
@@ -75,20 +73,31 @@ public class Base {
         return allICreditorsIbans;
     }
 
-    //validates iban format
-    //dropped it because it gives a IllegalArgumentException when parsing an invalid IBAN but the report is not clear
-//    protected static boolean validateIban(String iban) {
-//        IBAN ibn = IBAN.parse(iban);
-//        return ibn.isSEPA();
-//    }
+    public ArrayList<String> getALlIbans() {
+        ArrayList<String> allIbans = new ArrayList<>();
+        allIbans.add(getDebitorIban());
+        allIbans.addAll(getCreditorIbans());
+        System.out.println(allIbans);
+        return allIbans;
+    }
 
-    protected void validateIban(String iban) {
+    //validates ibans and adds them to a list of invalid ibans
+    private boolean isIbanValid(String iban) {
         String ibanPattern = "^[A-Z]{2}[0-9]{2}[A-Z0-9]{4}[0-9]{7}([A-Z0-9]?){0,16}$";
         Pattern pattern = Pattern.compile(ibanPattern);
         Matcher matcher = pattern.matcher(iban);
-        if (!matcher.matches()) {
-            invalidIbans.add(iban);
+        return matcher.matches();
+    }
+
+    //collects all invalid ibans
+    protected ArrayList<String> getInvalidIbans() {
+        ArrayList<String> invalidIbans = new ArrayList<>();
+        for (String iban : getALlIbans()) {
+            if(!isIbanValid(iban)) {
+                invalidIbans.add(iban);
+            }
         }
+        return invalidIbans;
     }
 
     //validates xml file with xsd file

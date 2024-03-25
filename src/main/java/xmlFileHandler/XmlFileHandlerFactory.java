@@ -14,7 +14,7 @@ public class XmlFileHandlerFactory {
         files.put("pain1", Files.PAIN1);
     }
 
-    public static XmlFileHandler createXmlFileHandler(String fileName) {
+    public XmlFileHandler createXmlFileHandler(String fileName) {
         return files.containsKey(fileName) ? new DefaultXmlFileHandler(fileName) : null;
     }
 }
