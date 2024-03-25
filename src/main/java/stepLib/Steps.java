@@ -4,6 +4,7 @@ import junit.framework.TestCase;
 import org.joda.time.LocalDate;
 import utils.DateUtils;
 
+import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 
 import static org.junit.Assert.fail;
@@ -11,7 +12,7 @@ import static org.junit.Assert.fail;
 public class Steps extends Base{
 
 
-    public void loadXml(String file) {
+    public void loadXml(String file) throws FileNotFoundException {
         loadXmlFile(file);
     }
 

@@ -1,6 +1,7 @@
 package xmlValidation;
 
 import net.serenitybdd.core.Serenity;
+import utils.JsonUtils;
 
 import javax.xml.XMLConstants;
 import javax.xml.transform.stream.StreamSource;
@@ -15,8 +16,8 @@ public class XmlValidation {
 
 
     public void checkXml(String xmlFile, String xsdFile) throws Exception{
-        String xmlFilePath = "src/main/resources/xmlFiles/" + xmlFile + ".xml";
-        String xsdFilePath = "src/main/resources/xsd/" + xsdFile + ".xsd";
+        String xmlFilePath = new JsonUtils().getXmlFilePath(xmlFile);
+        String xsdFilePath = new JsonUtils().getXsdFilePath(xmlFile);
 
         try {
 

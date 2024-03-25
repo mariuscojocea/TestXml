@@ -1,0 +1,10 @@
+{
+    "pain": {
+      "xmlFilePath": "src/main/resources/xmlFiles/pain.xml",
+      "xsdFilePath": "src/main/resources/xsd/pain.001.001.11.xsd"
+  },
+    "pain1": {
+        "xmlFilePath": "src/main/resources/xmlFiles/pain1.xml",
+        "xsdFilePath": "src/main/resources/xsd/pain.001.001.11.xsd"
+    }
+}
